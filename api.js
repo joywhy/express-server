@@ -1,20 +1,20 @@
 const express = require("express");
 const app = express();
 const cors = require('cors');
-const port = 3000;
+const port = 3001;
 
 app.use(cors())
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
+2
 app.get("/user/:name", (req, res) => {
   //const p = req.params; 파람스로 받는 법   p.id
   const {name}= req.params;
 
   if(name ==="dog"){
-    res.json({ name : "멍멍" });
+    res.json( { name : "멍멍" });
   }else if(name ==="cat"){
     res.json({ name : "애옹"});
   }else if(name ==="pig"){
